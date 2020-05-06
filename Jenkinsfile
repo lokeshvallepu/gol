@@ -21,12 +21,12 @@ pipeline {
       // define step to run
       steps {
         //invoke command to stop tomcat service
-        sh 'sc stop Tomcat'
-        sh 'ping http://13.127.145.206:9000/ -n 6'
+        bat 'sc stop Tomcat'
+        bat 'ping http://13.127.145.206:9000/'
         // copy war file from build target to webapp Tomcat folder
-        sh 'xcopy /y C:\\jenkins_slave\\workspace\\GOL_Pipeline\\gameoflife-web\\target\\gameoflife.war "C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps"'
+        bat 'xcopy /y C:\\jenkins_slave\\workspace\\GOL_Pipeline\\gameoflife-web\\target\\gameoflife.war "C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps"'
         //invoke command to start tomcat service      
-        sh 'sc start Tomcat8'
+        bat 'sc start Tomcat8'
       }
     } 
 
