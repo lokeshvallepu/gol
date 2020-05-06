@@ -2,7 +2,7 @@
 pipeline {
   // where pipeline job will run
   agent {
-    label 'Any'
+    label '15.206.164.207'
   }
   
   // start of stages : build, test, deploy ...
