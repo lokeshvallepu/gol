@@ -2,7 +2,7 @@
 pipeline {
   // where pipeline job will run
   agent {
-    label '15.206.164.207'
+    label 'ubuntu_slave'
   }
   
   // start of stages : build, test, deploy ...
