@@ -2,7 +2,7 @@
 pipeline {
   // where pipeline job will run
   agent {
-    label "any"
+    label 'Any'
   }
   
   // start of stages : build, test, deploy ...
